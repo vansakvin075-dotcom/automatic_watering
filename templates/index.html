@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automatic Watering System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link rel="stylesheet"
+      href="../static/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-seedling"></i>
+
+        <h2>Watering</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </li>
+
+        <li>
+            <i class="fa-solid fa-droplet"></i>
+            Pump
+        </li>
+
+        <li>
+            <i class="fa-solid fa-microchip"></i>
+            Arduino
+        </li>
+
+        <li>
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+    <div>
+
+        <h1>Automatic Watering System</h1>
+
+        <span id="clock"></span>
+
+    </div>
+
+    <div class="connection">
+
+        <span id="arduinoStatus" class="offline">
+            Offline
+        </span>
+
+    </div>
+
+</header>
+
+
+<!-- ================= CARDS ================= -->
+
+<div class="cards">
+
+    <div class="card">
+
+        <div class="icon green">
+
+            <i class="fa-solid fa-seedling"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Soil Moisture</h3>
+
+            <h2 id="soilValue">0</h2>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="icon blue">
+
+            <i class="fa-solid fa-droplet"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Pump</h3>
+
+            <h2 id="pumpStatus">OFF</h2>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="icon orange">
+
+            <i class="fa-solid fa-leaf"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Mode</h3>
+
+            <h2 id="modeValue">AUTO</h2>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="icon red">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Status</h3>
+
+            <h2 id="statusValue">Waiting</h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CONTENT ================= -->
+
+<div class="content">
+
+<div class="left">
+
+<div class="panel">
+
+<h2>Soil Moisture Gauge</h2>
+
+<div class="gauge">
+
+<div class="circle">
+
+<div id="percent">
+
+0%
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<h2>Manual Control</h2>
+
+<div class="buttons">
+
+<button id="onBtn">Pump ON</button>
+<button id="offBtn">Pump OFF</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="right">
+
+<div class="panel chartPanel">
+
+<h2>Live Soil Moisture</h2>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+Arduino • Raspberry Pi • Flask Dashboard
+
+</footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
+<script src="../static/js/script.js"></script>
+
+
+</body>
+
+</html>

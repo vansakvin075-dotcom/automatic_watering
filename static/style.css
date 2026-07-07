@@ -1,0 +1,861 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar{
+
+    width:260px;
+
+    background:#111827;
+
+    padding:30px 20px;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    bottom:0;
+
+    border-right:1px solid rgba(255,255,255,.05);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:45px;
+
+}
+
+.logo i{
+
+    color:#22c55e;
+
+    font-size:35px;
+
+}
+
+.logo h2{
+
+    font-weight:700;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    margin-bottom:15px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.sidebar li:hover{
+
+    background:#1e293b;
+
+}
+
+.sidebar li.active{
+
+    background:#22c55e;
+
+    color:#fff;
+
+}
+
+.sidebar li i{
+
+    width:25px;
+
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:35px;
+
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+header h1{
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+#clock{
+
+    display:block;
+
+    color:#94a3b8;
+
+    margin-top:8px;
+
+}
+
+.connection span{
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.online{
+
+    background:#16a34a;
+
+}
+
+.offline{
+
+    background:#dc2626;
+
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+}
+
+.green{
+
+    background:#16a34a;
+
+}
+
+.blue{
+
+    background:#2563eb;
+
+}
+
+.orange{
+
+    background:#f59e0b;
+
+}
+
+.red{
+
+    background:#ef4444;
+
+}
+
+.card h3{
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+.card h2{
+
+    font-size:28px;
+
+}/* =========================================
+   CONTENT
+========================================= */
+
+.content{
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:25px;
+
+}
+
+/* =========================================
+   PANEL
+========================================= */
+
+.panel{
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.35s;
+
+}
+
+.panel:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.panel h2{
+
+    font-size:20px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+/* =========================================
+   GAUGE
+========================================= */
+
+.gauge{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px 0;
+
+}
+
+.circle{
+
+    width:230px;
+
+    height:230px;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            #22c55e 0deg,
+            #22c55e 180deg,
+            #334155 180deg,
+            #334155 360deg);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    transition:.6s;
+
+}
+
+.circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    background:#0f172a;
+
+    border-radius:50%;
+
+}
+
+#percent{
+
+    position:relative;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:#fff;
+
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.buttons button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+#onBtn{
+
+    background:#16a34a;
+
+}
+
+#offBtn{
+
+    background:#dc2626;
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+
+}
+
+.buttons button:active{
+
+    transform:scale(.97);
+
+}
+
+.buttons i{
+
+    margin-right:10px;
+
+}
+
+/* =========================================
+   CHART
+========================================= */
+
+.chartPanel{
+
+    height:550px;
+
+}
+
+.chartPanel canvas{
+
+    width:100% !important;
+
+    height:430px !important;
+
+}
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.status-green{
+
+    color:#22c55e;
+
+    font-weight:600;
+
+}
+
+.status-red{
+
+    color:#ef4444;
+
+    font-weight:600;
+
+}
+
+.status-yellow{
+
+    color:#f59e0b;
+
+    font-weight:600;
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#22c55e;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#16a34a;
+
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        box-shadow:0 0 0 rgba(34,197,94,.4);
+    }
+
+    50%{
+        box-shadow:0 0 25px rgba(34,197,94,.5);
+    }
+
+    100%{
+        box-shadow:0 0 0 rgba(34,197,94,.4);
+    }
+
+}
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* =========================================
+   EFFECTS
+========================================= */
+
+.card,
+.panel{
+
+    animation:fadeIn .6s ease;
+
+}
+
+.icon{
+
+    animation:pulse 2.5s infinite;
+
+}
+
+.logo i{
+
+    animation:rotate 10s linear infinite;
+
+}
+
+.card:hover .icon{
+
+    transform:scale(1.08);
+
+    transition:.3s;
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.content{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+.sidebar{
+
+width:80px;
+
+padding:20px 10px;
+
+}
+
+.logo h2{
+
+display:none;
+
+}
+
+.sidebar li{
+
+justify-content:center;
+
+}
+
+.sidebar li{
+
+font-size:0;
+
+}
+
+.sidebar li i{
+
+font-size:20px;
+
+margin:0;
+
+}
+
+.main{
+
+margin-left:80px;
+
+width:calc(100% - 80px);
+
+padding:20px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.circle{
+
+width:180px;
+
+height:180px;
+
+}
+
+.circle::before{
+
+width:130px;
+
+height:130px;
+
+}
+
+#percent{
+
+font-size:32px;
+
+}
+
+.chartPanel{
+
+height:auto;
+
+}
+
+.chartPanel canvas{
+
+height:300px !important;
+
+}
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+body{
+
+font-size:14px;
+
+}
+
+header h1{
+
+font-size:22px;
+
+}
+
+.panel{
+
+padding:18px;
+
+}
+
+.card{
+
+padding:18px;
+
+}
+
+.buttons button{
+
+font-size:15px;
+
+padding:15px;
+
+}
+
+footer{
+
+font-size:12px;
+
+}
+
+}
+
+/* =========================================
+   GLASS EFFECT
+========================================= */
+
+.card,
+.panel{
+
+background:rgba(30,41,59,.85);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* =========================================
+   GRADIENT BORDER
+========================================= */
+
+.card:hover{
+
+border:1px solid #22c55e;
+
+}
+
+.panel:hover{
+
+border:1px solid #3b82f6;
+
+}
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection{
+
+background:#22c55e;
+
+color:#fff;
+
+}
