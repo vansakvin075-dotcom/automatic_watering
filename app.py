@@ -122,12 +122,11 @@ def pump():
 
 
         if state=="ON":
-
-            arduino.write(b'1')
-
+            arduino.reset_input_buffer()
+            arduino.write(b'1')   
 
         elif state=="OFF":
-
+            arduino.reset_input_buffer()
             arduino.write(b'0')
 
 
