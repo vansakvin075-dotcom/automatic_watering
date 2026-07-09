@@ -10,7 +10,7 @@ app = Flask(__name__)
 SERIAL_PORT = "COM4"
 BAUD_RATE = 9600
 
-
+#SERIAL_PORT = "/dev/ttyUSB0"
 arduino = None
 
 

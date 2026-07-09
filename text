@@ -1,0 +1,26 @@
+const int relayPin = 4;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(relayPin, OUTPUT);
+
+  // Relay OFF (Active LOW)
+  digitalWrite(relayPin, HIGH);
+}
+
+void loop() {
+
+  if (Serial.available() > 0) {
+    char command = Serial.read();
+
+    if (command == '1') {
+      digitalWrite(relayPin, LOW);   // Pump ON
+      Serial.println("ON");
+    }
+
+    else if (command == '0') {
+      digitalWrite(relayPin, HIGH);  // Pump OFF
+      Serial.println("OFF");
+    }
+  }
+}
